@@ -4,12 +4,6 @@
 
 <h3>Make a new appointment</h3>
 
-<%= form_for @appointment, remote: true do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :apt_time %>
-  <%= f.submit 'Make appointment' %>
-<% end %>
+<%= react_component('Label', label: 'Suck it') %>
 
-<div id="appointments">
-  <%= render 'appointments' %>
-</div>
+<%= react_component('Appointments', appointments: @appointments) %>
